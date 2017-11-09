@@ -1,101 +1,89 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <link rel="shortcut icon" type="image/x-icon" href="../Images/favicon.ico" />
-<title>Flatmate - Login</title>
+	<head>
 
+		<title>Flatmate - Login</title>
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
- 
- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+		<link rel="shortcut icon" type="image/x-icon" href="../Images/favicon.ico" />
 
-<script src="../Scripts/jquery-3.2.1.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+	 
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 
-<script src="../JavaScript/Time.js"></script>
+		<script src="../Scripts/jquery-3.2.1.min.js"></script>
+		<script src="../Scripts/Time.js"></script>
 
-
-
-     <!--    <!-- Bootstrap Core Css -->
-    <link href="../Bootstrap/css/bootstrap.css" rel="stylesheet" />
-    <link href="../Bootstrap/css/signin.css" rel="stylesheet" />
-    <link href="navbar.css" rel="stylesheet" /> 
-	
-<script>
-		var tEvt = setInterval('displayTime()', 1000); //a variable used to store the time
-		window.onload=displayTime;
+	    <!-- Bootstrap Core Css -->
+	    <link href="../Bootstrap/css/bootstrap.css" rel="stylesheet" />
+	    <link href="../Bootstrap/css/signin.css" rel="stylesheet" />
+	    <link href="navbar.css" rel="stylesheet" /> 
 		
-		function displayTime() //function used for the time
-		{
+		<script>
+
+			var tEvt = setInterval('displayTime()', 1000); //a variable used to store the time
+			window.onload=displayTime;
+				
+			function displayTime() //function used for the time
+			{
 				var dt = new Date(); //a variable used to store a new date
 				var time = dt.toLocaleTimeString(); //a variable used to store a new time
 				var year = dt.getFullYear();
 				document.getElementById("thetime").innerHTML = time; //displays data in the paragrahp tag thetime from a variable called time
 				document.getElementById("theyear").innerHTML = year;
-		}
-		
-		function checkUserPass() //function that is used for displaying and storing 
-		{
-		var un = document.getElementById("inputEmail"); //calls un
-		var pw = document.getElementById("inputPassword");//calls ps
-		
-		alert(un.value);
-		alert(pw.value);
-		
-		<!-- if(un.value = "john@test.co.uk" && pw.value = "pass"){ -->
-			<!-- alert("Successful!"); //an error message for the user -->
-		<!-- }else{ -->
-			<!-- alert("Error - Please enter correct username and password!"); //an error message for the user -->
-		<!-- }//end of if -->
-		}//end of function
-		
-		
-
-</script>
-
-
-	
-</head>
-
-<body>
-<h1 style="text-align: center;">Flatmate</h1>
-
-
- <div class="form-signin">
-            <div class=".form-signin input[type='email']">
-                <div style="width:450px;">
-                    <input type="email" class="form-control" id="inputEmail" placeholder="Email" size="20"/>
-
-                </div>
-
-            </div>
-            <div class=".form-signin input[type='password']">
-                <div style="width:450px;">
-                    <input type="password" class="form-control" id="inputPassword" placeholder="Password" size="20" />
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-sm-10">
-				<input type="button" onclick="checkUserPass();" value="Submit"/>
-				<p id="errorMsg"></p><!-- the ajax result wrapper -->
-                </div>
+			}
 				
-            </div>
-        </div>
-		
-
-		
+			function checkUserPass() //function that is used for displaying and storing 
+			{
+				var un = document.getElementById("inputEmail"); //calls un
+				var pw = document.getElementById("inputPassword");//calls ps
 				
+				alert(un.value);
+				alert(pw.value);
+				
+				if (un.value = "john@test.co.uk" && pw.value = "pass"){
+					alert("Successful!"); //an error message for the user
+				} else {
+					alert("Error - Please enter correct username and password!"); // An error message for the user -->
+				} //End of if
+			
+			} //End of function
 
-        <div class="container body-content">
-           <hr />
-            <footer style="text-align: center;">
+		</script>	
+
+	</head>
+
+	<body>
+		
+		<h1 style="text-align: center;">Flatmate</h1>
+
+		<div class="form-signin">
+	        <div class=".form-signin input[type='email']">
+	            <div style="width:450px;">
+	                <input type="email" class="form-control" id="inputEmail" placeholder="Email" size="20"/>
+	            </div>
+	        </div>
+	        <div class=".form-signin input[type='password']">
+	            <div style="width:450px;">
+	                <input type="password" class="form-control" id="inputPassword" placeholder="Password" size="20" />
+	            </div>
+	        </div>
+	        <div class="form-group text-center">
+	            <div class="col-sm-10">
+					<input type="button" onclick="checkUserPass();" value="Submit"/>
+					<p id="errorMsg"></p>
+	            </div>
+	        </div>
+	    </div>
+		
+	    <div class="container body-content">
+	        <hr />
+	        <footer style="text-align: center;">
 				<p id="thetime"></p><p id="theyear"></p>
-                <p>&copy; FlatMate Ltd. All rights reserve. Brookland Brother's Inc</p>
-            </footer>
-        </div>	
+	            <p>&copy; FlatMate Ltd. All rights reserve. Brookland Brother's Inc</p>
+	        </footer>
+	    </div>	
 
-		
-</body>
+	</body>
 </html>
