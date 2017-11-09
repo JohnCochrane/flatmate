@@ -1,6 +1,6 @@
 # flatmate
 
-FLatmate is a free web application for friends and roommates to track shared expenses and bills, so that everyone gets paid back.
+Flatmate is a free web application for friends and roommates to track shared expenses and bills, so that everyone gets paid back.
 
 In Dev Stages
 
